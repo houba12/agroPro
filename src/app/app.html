@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>
+
+<button *ngIf="showBackToTop" (click)="scrollToTop()" class="btn btn-primary back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>

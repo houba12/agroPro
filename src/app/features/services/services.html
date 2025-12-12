@@ -1,0 +1,149 @@
+<section class="services-hero py-4 mb-3">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-1">
+        <li class="breadcrumb-item"><a routerLink="/">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Services</li>
+      </ol>
+    </nav>
+    <h1 class="h3 fw-bold mb-0 page-title">Nos services</h1>
+  </div>
+</section>
+
+<style>
+  .service-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .service-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  
+  .service-image-container:hover .service-image {
+    transform: scale(1.05);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .service-image-container:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  .overlay-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+  }
+  
+  .service-image-container:hover .overlay-content {
+    transform: translateY(0);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+</style>
+
+<section class="services-area py-5">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-lg-1 order-2">
+        <h2 class="h3 fw-bold mb-4 animate-fadeInUp">Un accompagnement sur-mesure</h2>
+        <p class="text-muted mb-4 services-intro animate-fadeInUp delay-1">
+          Pour une performance accrue dans l'utilisation des produits d'hygiène professionnelle,
+          notre équipe vous accompagne à chaque étape&nbsp;: conseil, mise en place, assistance
+          technique et formation.
+        </p>
+        <div class="d-flex gap-3 animate-fadeInUp delay-2">
+          <a routerLink="/apropos" class="btn btn-primary">En savoir plus</a>
+          <a routerLink="/contact" class="btn btn-outline-primary">Nous contacter</a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+        <div class="service-image-container h-100 animate-fadeInUp delay-1">
+          <img src="/assets/service.jpeg" alt="Nos services d'hygiène professionnelle" class="service-image">
+          <div class="image-overlay">
+            <div class="overlay-content">
+              <i class="fas fa-hands-wash fa-3x mb-3"></i>
+              <h3 class="h4 mb-2">Expertise en hygiène</h3>
+              <p class="mb-0">Des solutions adaptées à vos besoins</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-md-6">
+        <div class="services-card h-100 p-4 rounded-3 shadow-sm bg-white">
+          <h3 class="h5 fw-semibold mb-3">Expertise et accompagnement</h3>
+          <p class="mb-3">
+            L’équipe PROAGRO vous accompagne pour maîtriser les méthodologies spécifiques qui sont
+            incontournables dans certains secteurs très exigeants en matière d’hygiène.
+          </p>
+          <ul class="services-list mb-0">
+            <li>Analyse de vos besoins et de vos contraintes opérationnelles.</li>
+            <li>Recommandations ciblées sur les produits d’hygiène adaptés.</li>
+            <li>Accompagnement à la mise en place des protocoles d’utilisation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="services-card h-100 p-4 rounded-3 shadow-sm bg-white">
+          <h3 class="h5 fw-semibold mb-3">Qualité et formation</h3>
+          <p class="mb-3">
+            Nous vous aidons à maîtriser votre démarche qualité en hygiène professionnelle grâce à
+            un accompagnement complet et régulier.
+          </p>
+          <ul class="services-list mb-0">
+            <li>Assistance technique sur site ou à distance.</li>
+            <li>Formation de vos équipes aux bonnes pratiques d’hygiène.</li>
+            <li>Suivi continu et ajustement des protocoles si nécessaire.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

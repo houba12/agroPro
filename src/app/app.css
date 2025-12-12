@@ -1,0 +1,37 @@
+/* Styles de base pour l'application */
+.main-content {
+  min-height: calc(100vh - 120px); /* Ajustez selon la hauteur de votre header/footer */
+  padding: 1rem 0;
+}
+
+/* Style pour le bouton de retour en haut */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles responsifs */
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
