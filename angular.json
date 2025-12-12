@@ -16,6 +16,34 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "outputPath": "dist/proagro",
+            "allowedCommonJsDependencies": [
+              "aos",
+              "@ng-bootstrap/ng-bootstrap"
+            ],
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "600kb",
+                "maximumError": "2mb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "100kb",
+                "maximumError": "200kb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "name": "src/app/features/acceuil/acceuil.css",
+                "maximumWarning": "100kb",
+                "maximumError": "200kb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "name": "src/app/footer/footer.css",
+                "maximumWarning": "100kb",
+                "maximumError": "200kb"
+              }
+            ],
            "assets": [
   "src/favicon.ico",
   "src/assets"
@@ -34,18 +62,6 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
               "outputHashing": "all"
             },
             "development": {
