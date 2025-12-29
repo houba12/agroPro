@@ -134,116 +134,93 @@
 <!-- En-tête de la page d'accueil -->
 <header class="acceuil-header" data-aos="fade-down" data-aos-duration="1000">
   <div class="container">
-    <div data-aos="fade-up" data-aos-delay="200">
-      <h1 class="display-4 fw-bold mb-3">Bienvenue chez <span class="text-gradient">PROAGRO</span></h1>
-      <p class="lead mb-4">Votre partenaire en solutions d'hygiène professionnelle</p>
-      <div class="header-buttons" data-aos="fade-up" data-aos-delay="400">
-        <a routerLink="/contact" class="btn btn-primary btn-lg me-3 pulse">Nous contacter</a>
-        <a routerLink="/services" class="btn btn-outline-light btn-lg">Nos services</a>
+    <div class="row align-items-center">
+      <!-- Texte de bienvenue -->
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+        <h1 class="display-4 fw-bold mb-3">Bienvenue chez <span class="text-gradient">PROAGRO</span></h1>
+        <p class="lead mb-4">Votre partenaire en solutions d'hygiène professionnelle</p>
+        <div class="header-buttons d-flex gap-3" data-aos="fade-up" data-aos-delay="400">
+          <a href="/contact" class="btn btn-primary btn-lg px-4 py-2 pulse">
+            <i class="fas fa-paper-plane me-2"></i>Nous contacter
+          </a>
+          <a href="/services" class="btn btn-outline-primary btn-lg px-4 py-2">
+            <i class="fas fa-tools me-2"></i>Nos services
+          </a>
+        </div>
+      </div>
+
+      <!-- Carte d'information -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="info-card">
+          <div class="info-grid">
+            <!-- Téléphone -->
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Appelez-nous</span>
+                <div class="d-flex align-items-center">
+                  <a href="tel:+21628609004" class="info-value">+216 28 609 004</a>
+                  <span class="mx-2">/</span>
+                  <a href="tel:+21628609005" class="info-value">+216 28 609 005</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Email</span>
+                <a href="mailto:info@proagro.com.tn" class="info-value">info@proagro.com.tn</a>
+              </div>
+            </div>
+
+            <!-- Heures d'ouverture -->
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Heures d'ouverture</span>
+                <span class="info-value">Lun - Ven: 8h00 - 18h00</span>
+              </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="info-item social-links">
+              <div class="info-icon">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">Suivez-nous</span>
+                <div class="d-flex gap-2 mt-2">
+                  <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="header-shape"></div>
-  
-  <!-- Barre d'informations déplacée ici -->
-  <div class="container mt-5">
-    <div class="info-bar-container">
-      <div class="info-bar-content">
-        <div class="info-item">
-          <i class="fas fa-phone-alt"></i>
-          <div>
-            <span>Appelez-nous</span>
-            <a href="tel:+21628609004">+216 28 609 004</a>
-            <span class="separator">/</span>
-            <a href="tel:+21628609005">+216 28 609 005</a>
-          </div>
-        </div>
-        <div class="info-divider"></div>
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <span>Email</span>
-            <a href="mailto:info@proagro.com.tn">info@proagro.com.tn</a>
-          </div>
-        </div>
-        <div class="info-divider"></div>
-        <div class="info-item">
-          <i class="fas fa-clock"></i>
-          <div>
-            <span>Heures d'ouverture</span>
-            <span>Lun - Ven: 8h00 - 18h00</span>
-          </div>
-        </div>
-        <div class="info-divider"></div>
-        <div class="info-item social-item">
-          <i class="fas fa-share-alt"></i>
-          <div class="social-links">
-            <span class="me-2">Suivez-nous</span>
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </header>
-
-<!-- Section Tableau de bord -->
-<section class="dashboard-area area-padding" data-aos="fade-up">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-        <div class="dashboard-content">
-          <h2 class="section-title mb-4">APPRÉCIER NOTRE <span class="text-gradient">DASHBOARD</span></h2>
-          <h3 class="mb-4">Bienvenue Chez Nous</h3>
-          <p class="lead mb-5">PROAGRO cherche toujours à être positionné comme le partenaire le plus préféré des plus grands groupes industriels et services.</p>
-          
-          <div class="dashboard-stats" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Niveau d'activité</span>
-                <span class="fw-bold">92%</span>
-              </div>
-              <mat-progress-bar mode="determinate" value="92" class="mb-4"></mat-progress-bar>
-            </div>
-            
-            <div class="stat-item">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Satisfaction client</span>
-                <span class="fw-bold">98%</span>
-              </div>
-              <mat-progress-bar mode="determinate" value="98" color="accent" class="mb-4"></mat-progress-bar>
-            </div>
-            
-            <div class="stat-item">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Projets livrés à temps</span>
-                <span class="fw-bold">95%</span>
-              </div>
-              <mat-progress-bar mode="determinate" value="95" color="warn" class="mb-4"></mat-progress-bar>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="dashboard-image text-center">
-          <img src="assets/images/dashboard-illustration.svg" alt="Tableau de bord PROAGRO" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Section À propos -->
 <section id="about" class="about-area area-padding">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="section-headline text-center">
-          <h1>À Propos de PROAGRO</h1>
+        <div class="section-heading text-center">
+          <h2 class="section-title">À Propos de <span class="text-gradient">PROAGRO</span></h2>
+          <div class="divider mx-auto"></div>
         </div>
       </div>
     </div>
@@ -252,7 +229,7 @@
         <div class="well-left">
           <div class="single-well">
             <img src="assets/logo.png" alt="À propos de PROAGRO" class="img-responsive">
-            <p class="text-center mt-3">"L'hygiène pour les professionnels"</p>
+            <p class="text-center mt-3 fw-bold" style="color: #1a237e;">L'hygiène pour les professionnels</p>
           </div>
         </div>
       </div>
@@ -270,7 +247,6 @@
     </div>
   </div>
 </section>
-
 <!-- Section Services -->
 <section id="services" class="services-area area-padding">
   <div class="container">
@@ -337,6 +313,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Section Partenaires -->
 <section id="partenaires" class="partenaires-area area-padding">
@@ -425,7 +402,7 @@
 </section>
 
 <!-- Section Statistiques -->
-<section id="statistiques" class="stats-area area-padding bg-light">
+<section id="statistiques" class="stats-area area-padding">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
@@ -477,17 +454,23 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title">Nos Réalisations</h2>
-        <p class="lead">Découvrez nos réalisations et nos projets récents</p>
-        <div class="gallery-filters">
-          <button 
-            *ngFor="let category of categories" 
-            (click)="setActiveCategory(category)"
-            [class.active]="activeCategory === category"
-            class="btn btn-outline-primary mx-1 mb-2"
-          >
-            {{ category }}
-          </button>
+        <div class="section-heading">
+          <h2 class="section-title">Nos <span class="text-gradient">Réalisations</span></h2>
+          <div class="divider mx-auto"></div>
+          <p class="lead">Découvrez nos gammes de produits professionnels</p>
+        </div>
+        <div class="gallery-filters mb-4">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button 
+              *ngFor="let category of categories" 
+              (click)="setActiveCategory(category.id)"
+              [class.btn-primary]="activeCategory === category.id"
+              [class.btn-outline-primary]="activeCategory !== category.id"
+              class="btn px-4 py-2 fw-medium"
+            >
+              {{ category.name }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -501,17 +484,14 @@
       >
         <div class="gallery-item">
           <div class="gallery-img">
-            <img 
-              [src]="image.src" 
-              [alt]="image.alt" 
-              class="img-fluid cursor-zoom-in"
-              loading="lazy"
-              (click)="openLightbox(image, i)"
-              [attr.data-index]="i"
-            >
-            <div class="gallery-overlay" (click)="$event.stopPropagation(); openImagePopup(image)">
-              <div class="gallery-info">
-                <i class="fas fa-search-plus"></i>
+            <div class="product-card-content">
+              <div class="product-name">{{image.title}}</div>
+              <div class="product-category">{{image.category | titlecase}}</div>
+              <div class="product-description">{{image.description}}</div>
+              <div class="gallery-overlay" (click)="$event.stopPropagation(); openImagePopup(image)">
+                <div class="gallery-info">
+                  <i class="fas fa-info-circle"></i> Détails
+                </div>
               </div>
             </div>
             
@@ -558,23 +538,47 @@
   </div>
 </div>
 
-<!-- Section Témoignages -->
-<section id="testimonials" class="testimonials-area">
-  <div class="testi-inner area-padding">
-    <div class="testi-overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="testimonial-content text-center">
-            <div class="single-testi">
-              <div class="testi-text">
-                <p class="lead">CE QUE DISENT NOS CLIENTS</p>
-                <h2>Témoignages</h2>
-                <p>Découvrez ce que nos clients disent de nos services et produits d'hygiène professionnelle.</p>
-                <!-- Les témoignages seront ajoutés ici ultérieurement -->
+<!-- Section Tableau de bord -->
+<section class="dashboard-area area-padding" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+        <div class="dashboard-content">
+          <h2 class="section-title mb-4">APPRÉCIER NOTRE <span class="text-gradient">DASHBOARD</span></h2>
+          <h3 class="mb-4">Bienvenue Chez Nous</h3>
+          <p class="lead mb-5">PROAGRO cherche toujours à être positionné comme le partenaire le plus préféré des plus grands groupes industriels et services.</p>
+          
+          <div class="dashboard-stats" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Niveau d'activité</span>
+                <span class="fw-bold">92%</span>
               </div>
+              <mat-progress-bar mode="determinate" value="92" class="mb-4"></mat-progress-bar>
+            </div>
+            
+            <div class="stat-item">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Satisfaction client</span>
+                <span class="fw-bold">98%</span>
+              </div>
+              <mat-progress-bar mode="determinate" value="98" color="accent" class="mb-4"></mat-progress-bar>
+            </div>
+            
+            <div class="stat-item">
+              <div class="d-flex justify-content-between mb-2">
+                <span>Projets livrés à temps</span>
+                <span class="fw-bold">95%</span>
+              </div>
+              <mat-progress-bar mode="determinate" value="95" color="warn" class="mb-4"></mat-progress-bar>
             </div>
           </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="dashboard-image text-center">
+          <img src="assets/service.jpeg" alt="Services PROAGRO" class="img-fluid rounded shadow">
         </div>
       </div>
     </div>

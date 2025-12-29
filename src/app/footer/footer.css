@@ -40,6 +40,20 @@
   padding-top: 2rem;
 }
 
+/* Style du logo du footer */
+.footer-logo-img {
+  height: 50px; /* Hauteur similaire au logo du header */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(1) invert(0); /* Pour afficher le logo dans sa couleur d'origine (bleu) */
+}
+
+/* Effet de survol sur le logo */
+.footer-logo a:hover .footer-logo-img {
+  transform: scale(1.08); /* Effet de zoom léger au survol */
+}
+
 /* Animation des colonnes du footer avec un délai progressif */
 .footer-block {
   opacity: 0;

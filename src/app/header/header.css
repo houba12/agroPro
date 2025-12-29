@@ -38,12 +38,13 @@ nav.navbar {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.7rem; /* Taille de police du logo texte augmentée */
   transition: transform 0.3s ease;
+  margin-right: 1.5rem; /* Espacement accru après le logo */
 }
 
  .navbar-logo {
-  height: 52px; /* logo un peu plus grand */
+  height: 60px; /* Taille du logo augmentée */
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -93,6 +94,9 @@ nav.navbar {
   position: relative;
   transition: all 0.3s ease;
   transform-origin: center;
+  font-size: 1.15rem; /* Taille de police augmentée */
+  padding: 0.5rem 1rem; /* Espacement accru autour des liens */
+  margin: 0 0.3rem; /* Marge entre les éléments de menu */
 }
 
 .nav-link:hover {

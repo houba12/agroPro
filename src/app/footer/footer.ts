@@ -1,10 +1,11 @@
 import { Component, OnInit, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })

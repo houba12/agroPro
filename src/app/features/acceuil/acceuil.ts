@@ -20,83 +20,120 @@ export class Acceuil implements OnInit, AfterViewInit {
   lightboxImages: any[] = [];
 
   // Ouvrir la lightbox
-  // Tableau des images de la galerie
+  // Tableau des produits de la galerie
   galleryImages = [
+    // Hygiène De Surface
     {
       src: 'assets/portfolio/1.jpg',
-      alt: 'Produit d\'hygiène professionnelle',
-      title: 'Produits d\'hygiène',
-      category: 'hygiene',
-      description: 'Gamme complète de produits d\'hygiène professionnelle'
+      alt: 'ARVO 21 SR',
+      title: 'ARVO 21 SR',
+      category: 'hygiene-surface',
+      description: 'Désinfectant professionnel multi-surfaces'
     },
     {
       src: 'assets/portfolio/2.jpg',
-      alt: 'Nettoyage industriel',
-      title: 'Nettoyage industriel',
-      category: 'nettoyage',
-      description: 'Solutions de nettoyage pour l\'industrie'
+      alt: 'BASO RENOV',
+      title: 'BASO RENOV',
+      category: 'hygiene-surface',
+      description: 'Nettoyant et dégraissant haute performance'
     },
     {
       src: 'assets/portfolio/3.jpg',
-      alt: 'Matériel professionnel',
-      title: 'Équipements',
-      category: 'equipement',
-      description: 'Matériel professionnel de qualité supérieure'
+      alt: 'BASO BIONIL',
+      title: 'BASO BIONIL',
+      category: 'hygiene-surface',
+      description: 'Désinfectant et détergent enzymatique'
     },
     {
       src: 'assets/portfolio/4.jpg',
-      alt: 'Produits d\'entretien',
-      title: 'Entretien',
-      category: 'entretien',
-      description: 'Produits d\'entretien professionnels'
+      alt: 'BASO AUTO CLEAN S',
+      title: 'BASO AUTO CLEAN S',
+      category: 'hygiene-surface',
+      description: 'Nettoyant désinfectant pour surfaces'
     },
     {
       src: 'assets/portfolio/5.jpg',
-      alt: 'Hygiène alimentaire',
-      title: 'Alimentaire',
-      category: 'alimentaire',
-      description: 'Produits adaptés à l\'industrie alimentaire'
+      alt: 'INDAL MTA',
+      title: 'INDAL MTA',
+      category: 'hygiene-surface',
+      description: 'Détergent désinfectant concentré'
     },
+    
+    // Hygiène Des Mains
     {
       src: 'assets/portfolio/6.jpg',
-      alt: 'Matériel de protection',
-      title: 'Protection',
-      category: 'protection',
-      description: 'Équipements de protection individuelle'
+      alt: 'ARVO 21 SR Gel',
+      title: 'ARVO 21 SR GEL',
+      category: 'hygiene-mains',
+      description: 'Gel hydroalcoolique désinfectant pour les mains'
+    },
+    
+    // Hygiène Des Circuits
+    {
+      src: 'assets/portfolio/7.jpg',
+      alt: 'INDAL PERACID 50',
+      title: 'INDAL PERACID 50',
+      category: 'hygiene-circuits',
+      description: 'Désinfectant concentré pour circuits'
     },
     {
-      src: 'assets/blog/2.jpg',
-      alt: 'Formation professionnelle',
-      title: 'Formation',
-      category: 'formation',
-      description: 'Sessions de formation professionnelle'
+      src: 'assets/portfolio/8.jpg',
+      alt: 'INDAL MSP',
+      title: 'INDAL MSP',
+      category: 'hygiene-circuits',
+      description: 'Détergent désinfectant pour circuits médicaux'
     },
+    
+    // Hygiène D'élevage
     {
-      src: 'assets/blog/4.jpg',
-      alt: 'Solutions sur mesure',
-      title: 'Solutions sur mesure',
-      category: 'solutions',
-      description: 'Des solutions adaptées à vos besoins spécifiques'
+      src: 'assets/portfolio/9.jpg',
+      alt: 'ARVO BVF',
+      title: 'ARVO BVF',
+      category: 'hygiene-elevage',
+      description: 'Solution d\'hygiène pour élevages'
+    },
+    
+    // Hygiène D'ambiance
+    {
+      src: 'assets/portfolio/10.jpg',
+      alt: 'INDAL OXY DVA ECOCERT',
+      title: 'INDAL OXY DVA ECOCERT',
+      category: 'hygiene-ambiance',
+      description: 'Désinfectant d\'ambiance écologique certifié'
     }
   ];
-
-  // Catégories uniques pour le filtrage
-  categories = ['Tous', ...new Set(this.galleryImages.map(img => img.category))];
   
+  // Catégories personnalisées avec libellés en français
+  categories = [
+    { id: 'tous', name: 'Tout' },
+    { id: 'hygiene-surface', name: 'Hygiène De Surface' },
+    { id: 'hygiene-mains', name: 'Hygiène Des Mains' },
+    { id: 'hygiene-circuits', name: 'Hygiène Des Circuits' },
+    { id: 'hygiene-elevage', name: 'Hygiène D\'élevage' },
+    { id: 'hygiene-ambiance', name: 'Hygiène D\'ambiance' }
+  ];
+
   // Catégorie active
-  activeCategory = 'Tous';
+  activeCategory = 'tous';
 
   // Filtrer les images par catégorie
   get filteredImages() {
-    if (this.activeCategory === 'Tous') {
+    if (!this.activeCategory || this.activeCategory === 'tous') {
       return this.galleryImages;
     }
     return this.galleryImages.filter(img => img.category === this.activeCategory);
   }
 
   // Changer la catégorie active
-  setActiveCategory(category: string) {
-    this.activeCategory = category;
+  setActiveCategory(categoryId: string) {
+    this.activeCategory = categoryId;
+    // Faire défiler vers la section galerie lors du changement de catégorie
+    setTimeout(() => {
+      const element = document.getElementById('gallery');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   }
 
   // Ouvrir la lightbox
