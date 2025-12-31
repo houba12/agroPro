@@ -44,7 +44,7 @@ nav.navbar {
 }
 
  .navbar-logo {
-  height: 60px; /* Taille du logo augmentée */
+  height: 40px; /* Taille du logo réduite */
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
