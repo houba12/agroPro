@@ -15,7 +15,11 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'proagro';
 
+  constructor(
+  ) {}
+
   ngOnInit() {
+
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
