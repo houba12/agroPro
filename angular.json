@@ -16,10 +16,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "outputPath": "dist/proagro",
-            "allowedCommonJsDependencies": [
-              "aos",
-              "@ng-bootstrap/ng-bootstrap"
-            ],
+            "allowedCommonJsDependencies": ["aos", "@ng-bootstrap/ng-bootstrap"],
             "budgets": [
               {
                 "type": "initial",
@@ -44,11 +41,7 @@
                 "maximumError": "200kb"
               }
             ],
-           "assets": [
-  "src/favicon.ico",
-  "src/assets"
-],
-
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css",
@@ -98,9 +91,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           }
         }
       }

@@ -1,8 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
+import { ScrollTopComponent } from "./components/scroll-top/scroll-top-component";
 
 @Component({
   selector: 'app-root',
@@ -11,21 +12,11 @@ import { Footer } from './footer/footer';
     CommonModule,
     RouterOutlet,
     Header,
-    Footer
-  ],
+    Footer,
+    ScrollTopComponent
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  showBackToTop = false;
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    const offset = window.scrollY || document.documentElement.scrollTop || 0;
-    this.showBackToTop = offset > 200;
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 }

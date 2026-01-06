@@ -137,15 +137,17 @@
     <div class="row align-items-center">
       <!-- Texte de bienvenue -->
       <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-        <h1 class="display-4 fw-bold mb-3">Bienvenue chez <span class="text-gradient">PROAGRO</span></h1>
-        <p class="lead mb-4">Votre partenaire en solutions d'hygiène professionnelle</p>
-        <div class="header-buttons d-flex gap-3" data-aos="fade-up" data-aos-delay="400">
-          <a href="/contact" class="btn btn-primary btn-lg px-4 py-2 pulse">
-            <i class="fas fa-paper-plane me-2"></i>Nous contacter
-          </a>
-          <a href="/services" class="btn btn-outline-primary btn-lg px-4 py-2">
-            <i class="fas fa-tools me-2"></i>Nos services
-          </a>
+        <div class="d-flex flex-column align-items-start">
+          <h1 class="display-4 fw-bold mb-1 align-self-start">Bienvenue chez <span class="text-gradient">PROAGRO</span></h1>
+          <p class="lead mb-2 align-self-start">Votre partenaire en solutions d'hygiène professionnelle</p>
+          <div class="header-buttons d-flex gap-3 align-self-start" data-aos="fade-up" data-aos-delay="400">
+            <a href="/contact" class="btn btn-primary btn-lg px-4 py-2 pulse">
+              <i class="fas fa-paper-plane me-2"></i>Nous contacter
+            </a>
+            <a href="/services" class="btn btn-outline-primary btn-lg px-4 py-2">
+              <i class="fas fa-tools me-2"></i>Nos services
+            </a>
+          </div>
         </div>
       </div>
 
@@ -234,7 +236,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 d-flex flex-column align-items-start">
         <div class="well-left">
           <div class="single-well">
             <img src="assets/logo.png" alt="À propos de PROAGRO" class="img-responsive">
@@ -499,7 +501,7 @@
     <div class="row g-4">
       <div 
         *ngFor="let image of filteredImages; let i = index" 
-        class="col-lg-3 col-md-4 col-sm-6"
+        class=" col-sm-6 col-md-4 col-lg-3"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
