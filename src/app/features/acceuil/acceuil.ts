@@ -13,6 +13,29 @@ import 'aos/dist/aos.css';
 })
 export class Acceuil implements OnInit, AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  // Gère le survol d'une carte
+  onCardHover(event: Event): void {
+    const card = event.currentTarget as HTMLElement;
+    const description = card.querySelector('.card-description') as HTMLElement;
+    if (description) {
+      description.style.maxHeight = '200px';
+      description.style.opacity = '1';
+      description.style.margin = '15px 0';
+    }
+  }
+
+  // Gère la sortie de la souris d'une carte
+  onCardLeave(event: Event): void {
+    const card = event.currentTarget as HTMLElement;
+    const description = card.querySelector('.card-description') as HTMLElement;
+    if (description) {
+      description.style.maxHeight = '0';
+      description.style.opacity = '0';
+      description.style.margin = '0';
+    }
+  }
+
   // Variables pour la lightbox
   showLightbox = false;
   selectedImage: any = null;

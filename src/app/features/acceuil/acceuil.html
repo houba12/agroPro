@@ -25,7 +25,7 @@
                 <a href="tel:+21628609004" class="btn btn-primary btn-lg px-4">
                   <i class="fas fa-phone-alt me-2"></i> Appeler maintenant
                 </a>
-                <a href="#contact" class="btn btn-outline-light btn-lg px-4">
+                <a href="/contact" class="btn btn-outline-light btn-lg px-4">
                   <i class="fas fa-envelope me-2"></i> Nous écrire
                 </a>
               </div>
@@ -175,7 +175,7 @@
               </div>
               <div class="info-content">
                 <span class="info-label">Email</span>
-                <a href="mailto:info@proagro.com.tn" class="info-value">info@proagro.com.tn</a>
+                <a href="mailto:info@proagro.tn" class="info-value">info@proagro.tn</a>
               </div>
             </div>
 
@@ -186,25 +186,34 @@
               </div>
               <div class="info-content">
                 <span class="info-label">Heures d'ouverture</span>
-                <span class="info-value">Lun - Ven: 8h00 - 18h00</span>
+                <span class="info-value">Lun - Ven: 8h00 - 17h00</span>
               </div>
             </div>
 
             <!-- Réseaux sociaux -->
-            <div class="info-item social-links">
-              <div class="info-icon">
-                <i class="fas fa-share-alt"></i>
-              </div>
-              <div class="info-content">
-                <span class="info-label">Suivez-nous</span>
-                <div class="d-flex gap-2 mt-2">
-                  <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
+<div class="info-item social-links d-flex align-items-center justify-content-center gap-3 text-center">
+  <div class="info-icon">
+    <i class="fas fa-share-alt"></i>
+  </div>
+
+  <div class="info-content">
+    <span class="info-label d-block">Suivez-nous</span>
+    <div class="d-flex flex-row justify-content-center gap-2 mt-2">
+      <a href="#" class="social-icon" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    
+      <a href="#" class="social-icon" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
           </div>
         </div>
       </div>
@@ -261,53 +270,65 @@
     <div class="row g-4">
       <!-- Carte 1 -->
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-award"></i>
+        <div class="service-card" (mouseenter)="onCardHover($event)" (mouseleave)="onCardLeave($event)">
+          <div class="card-content">
+            <div class="icon-wrapper">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3 class="h4">Nos qualités & Valeurs</h3>
+            <div class="card-description">
+              <p>Ses points forts portent sur la Qualité, la Sécurité, et le respect de l'Environnement.</p>
+              <p>Nous nous engageons à respecter les normes les plus strictes pour vous offrir des solutions d'hygiène exceptionnelles.</p>
+            </div>
           </div>
-          <h3 class="h4">Nos qualités & Valeurs</h3>
-          <p class="mb-3">Ses points forts portent sur la Qualité, la Sécurité, et le respect de l'Environnement.</p>
-          <p class="mb-3">Nous nous engageons à respecter les normes les plus strictes pour vous offrir des solutions d'hygiène exceptionnelles.</p>
-          <a href="#" class="btn-action">En savoir plus</a>
         </div>
       </div>
 
       <!-- Carte 2 -->
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-hands-helping"></i>
+        <div class="service-card" (mouseenter)="onCardHover($event)" (mouseleave)="onCardLeave($event)">
+          <div class="card-content">
+            <div class="icon-wrapper">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3 class="h4">Savoir-faire</h3>
+            <div class="card-description">
+              <p>La proximité est au cœur de notre ADN et de notre mission pour satisfaire nos clients.</p>
+              <p>Une équipe d'experts à votre écoute pour des solutions personnalisées et efficaces.</p>
+            </div>
           </div>
-          <h3 class="h4">Savoir-faire</h3>
-          <p class="mb-3">La proximité est au cœur de notre ADN et de notre mission pour satisfaire nos clients.</p>
-          <p class="mb-3">Une équipe d'experts à votre écoute pour des solutions personnalisées et efficaces.</p>
-          <a href="#" class="btn-action">Découvrir</a>
         </div>
       </div>
 
       <!-- Carte 3 -->
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-headset"></i>
+        <div class="service-card" (mouseenter)="onCardHover($event)" (mouseleave)="onCardLeave($event)">
+          <div class="card-content">
+            <div class="icon-wrapper">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="h4">Notre Support</h3>
+            <div class="card-description">
+              <p>Un accompagnement personnalisé pour répondre à tous vos besoins en hygiène professionnelle.</p>
+              <p>Notre équipe est disponible pour vous conseiller et vous accompagner à chaque étape.</p>
+            </div>
           </div>
-          <h3 class="h4">Notre Support</h3>
-          <p class="mb-3">Un accompagnement personnalisé pour répondre à tous vos besoins en hygiène professionnelle.</p>
-          <p class="mb-3">Notre équipe est disponible pour vous conseiller et vous accompagner à chaque étape.</p>
-          <a routerLink="/contact" class="btn-action">Nous contacter</a>
         </div>
       </div>
 
       <!-- Carte 4 -->
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-lightbulb"></i>
+        <div class="service-card" (mouseenter)="onCardHover($event)" (mouseleave)="onCardLeave($event)">
+          <div class="card-content">
+            <div class="icon-wrapper">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="h4">Nos innovations</h3>
+            <div class="card-description">
+              <p>Des solutions innovantes pour répondre aux défis d'aujourd'hui et de demain.</p>
+              <p>Nous développons constamment de nouvelles solutions pour répondre à l'évolution des besoins.</p>
+            </div>
           </div>
-          <h3 class="h4">Nos innovations</h3>
-          <p class="mb-3">Des solutions innovantes pour répondre aux défis d'aujourd'hui et de demain.</p>
-          <p class="mb-3">Nous développons constamment de nouvelles solutions pour répondre à l'évolution des besoins.</p>
-          <a href="#" class="btn-action">Voir nos solutions</a>
         </div>
       </div>
     </div>
